@@ -7,7 +7,7 @@ print(dict1)
 
 x = dict1[2]
 print(x)
-
+dict1[6] = [1, ]
 z = dict1.pop(2, 'No')
 print(dict1)
 
