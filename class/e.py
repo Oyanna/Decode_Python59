@@ -1,5 +1,5 @@
 class Student:
-    def __init__(self, surname, name, course, status):
+    def __init__(self, surname, name, course, status): #private
         self.surname = surname
         self.name = name
         self.course = course
