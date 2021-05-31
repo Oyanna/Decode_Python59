@@ -2,6 +2,7 @@ from tkinter import *
 window = Tk()
 window.title("Привет, мир!")
 window.geometry("500x300")
+window.resizable(width=False, height=False)
 
 lbl1 = Label(window, text = "hello", font=("Arial", 50))
 lbl1.grid(column = 0, row = 0)

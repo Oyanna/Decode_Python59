@@ -7,6 +7,6 @@ window.geometry("500x300")
 
 combo = Combobox(window)
 combo['values'] = (1, 2, 3, 4, 5)
-combo.current(0)
+combo.current(3)
 combo.grid(column = 0, row = 0)
 window.mainloop()

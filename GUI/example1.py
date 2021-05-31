@@ -11,7 +11,7 @@ window.geometry("500x300")
 
 selected = IntVar()
 
-rd1 = Radiobutton(window, text="Первый", value=100, variable=selected)
+rd1 = Radiobutton(window, text="Первый", value=1, variable=selected)
 rd2 = Radiobutton(window, text="Второй", value=7, variable=selected)
 rd3 = Radiobutton(window, text="Третий", value=8, variable=selected)
 
