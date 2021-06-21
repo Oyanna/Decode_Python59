@@ -1,6 +1,21 @@
 from tkinter import *
 from tkinter.ttk import Combobox
 
+class Example(Frame):
+    def __init__(self):
+        super().__init__()
+        self.initUI()
+    def initUI(self):
+        self.master.title("Simple Menu")
+        menubar=Menu(self.master)
+        self.master.config(menu=menubar)
+        fileMenu=Menu(menubar)
+        fileMenu.add_command(label="New file")
+        fileMenu.add_command(label="Exit", command=self.onExit)
+        menubar.add_cascade(label="Подробнее", menu=fileMenu)
+    def onExit(self):
+        self.quit()
+
 def calc(inp1, inp2):
     a = int(inp1)
     b = int(inp2)
@@ -38,6 +53,7 @@ def clear(event):
 
 window = Tk()
 window.title("Calculator")
+ex = Example()
 window.minsize(100, 100)
 window.resizable(width=False, height=False)
 
