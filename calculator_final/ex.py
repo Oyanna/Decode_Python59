@@ -9,39 +9,19 @@ input_text=StringVar()
 
 def btn_click(item):
     global expression
-    global expression_cur
-    global lastNum
-    if item=="+" or item=="-" or item=="*" or item=="/":
-        print(item)
-        # expression=expression+str(item)
-        lastNum = ""
-    else:
-        expression_cur = expression_cur + str(item)
-        lastNum = lastNum + str(item)
-        input_text.set(lastNum)
     expression = expression + str(item)
-
+    input_text.set(expression)
 def btn_clear():
     global expression
-    global expression_cur
-    global lastNum
     expression=""
     input_text.set(expression)
-    expression_cur = ""
-    lastNum=""
 
 def btn_equal():
     global expression
-    global expression_cur
-    global lastNum
     result=str(eval(expression))
     input_text.set(result)
-    expression=result
-    lastNum = ""
-
+    expression=" "
 expression=""
-lastNum=""
-expression_cur=""
 
 
 input_frame = Frame(window, width=350, height=50, bg="lightblue", bd=5)
